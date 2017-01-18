@@ -405,11 +405,11 @@
 			$count = count($this->array);
 			for ($i = 0; $i < $count; $i++) {
 				if (is_array($this->array[$i])) {
-					if (!in_array($this->array[$i], $filter, true)) {
+					if (!in_array($filter, $this->array[$i], true)) {
 						unset($this->array[$i]);
 					}
 				} else {
-					if (!in_array($this->array[$i], $filter)) {
+					if (!in_array($filter, $this->array[$i])) {
 						unset($this->array[$i]);
 					}
 				}
